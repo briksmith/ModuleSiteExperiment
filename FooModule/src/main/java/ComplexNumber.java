@@ -12,11 +12,25 @@ public class ComplexNumber {
         imaginary = inImaginary;
     }
 
+    public void addToComplex(ComplexNumber inComplexNumber){
+
+        this.real += inComplexNumber.real;
+        this.imaginary += inComplexNumber.imaginary;
+    }
+
     public double getReal() {
         return real;
     }
 
+    public void setReal(double real) {
+        this.real = real;
+    }
+
     public double getImaginary() {
         return imaginary;
+    }
+
+    public void setImaginary(double imaginary) {
+        this.imaginary = imaginary;
     }
 }
