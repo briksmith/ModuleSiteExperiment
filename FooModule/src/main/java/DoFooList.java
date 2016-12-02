@@ -7,4 +7,7 @@ public class DoFooList {
 
     ArrayList<Foo> fooList;
 
+    Foo f;
+
+
 }

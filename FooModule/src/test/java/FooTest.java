@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
  */
 public class FooTest {
 
+    Foo systemUnderTest;
+
     @Before
     public void setUp(){
 
