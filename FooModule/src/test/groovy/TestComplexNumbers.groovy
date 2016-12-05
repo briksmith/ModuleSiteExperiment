@@ -5,20 +5,17 @@ import spock.lang.Unroll
  */
 
 class TestEqualsMethod extends Specification {
-    def i = new ComplexNumber(2,9)
 
-
-
-    def "checkEqualsMethod"(double real, double imaginary, boolean result) {
+    def "checkEqualsMethod" (ComplexNumber i, ComplexNumber j, boolean result) {
 
         expect:
-        def j = new ComplexNumber(real, imaginary)
+
         assert i.equals(j) == result : "i: " + i.toString() + "\n" +
                 "j: " + j.toString() + "\n" +
                 " i equals j should have been: " + result
         where:
-        real << [2, 2, 3, 4]
-        imaginary << [9, 8, 9, 4 ]
+        i << [new ComplexNumber(2, 2), new ComplexNumber(2, 2), new ComplexNumber(2, 2), new ComplexNumber(2, 2) ]
+        j << [new ComplexNumber(2, 2), new ComplexNumber(2, 3), new ComplexNumber(3, 2), new ComplexNumber(3, 3) ]
         result << [true, false, false, false]
     }
 }
@@ -35,7 +32,7 @@ class TestNoArgsComplexConstructor extends Specification {
 
 class TestConstructorOfComplexNumbers extends Specification {
 
-    def i = new ComplexNumber(1, 3)
+    def i = new ComplexNumber(1.0, 3.0)
 
     def "checkConstructor"() {
         expect:

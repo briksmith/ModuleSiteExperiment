@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 /**
  * Created by Brian Smith on 12/1/2016.
  */
@@ -10,7 +12,7 @@ public class ComplexNumber {
 
     }
 
-    public ComplexNumber(double inReal, double inImaginary){
+    public ComplexNumber(double inReal, double inImaginary) {
 
         real = inReal;
         imaginary = inImaginary;
