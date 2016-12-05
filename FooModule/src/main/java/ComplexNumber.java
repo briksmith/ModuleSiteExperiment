@@ -6,10 +6,20 @@ public class ComplexNumber {
     private double real;
     private double imaginary;
 
+    public ComplexNumber(){
+
+    }
+
     public ComplexNumber(double inReal, double inImaginary){
 
         real = inReal;
         imaginary = inImaginary;
+    }
+
+    public ComplexNumber(ComplexNumber inComplexNumber){
+
+        real = inComplexNumber.real;
+        imaginary = inComplexNumber.imaginary;
     }
 
     public void addToComplex(ComplexNumber inComplexNumber){
@@ -47,5 +57,19 @@ public class ComplexNumber {
 
     public void setImaginary(double imaginary) {
         this.imaginary = imaginary;
+    }
+
+    public boolean equals(Object o){
+        if ( o instanceof ComplexNumber){
+            ComplexNumber inComplex = (ComplexNumber)o;
+            if ( real == inComplex.real && imaginary == inComplex.imaginary){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public String toString() {
+        return "Real component: " + real + " Imaginary component: " + imaginary;
     }
 }
